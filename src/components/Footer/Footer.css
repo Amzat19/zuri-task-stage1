@@ -1,0 +1,41 @@
+.footer {
+    width: 90vw;
+    border-top: 1px solid #EAECF0;
+    padding-top: 40px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 5vw;
+    display: grid;
+    gap: 15px;
+}
+
+.footer>div {
+    position: relative;
+}
+
+.footer>p {
+    color: #667085;
+}
+
+.red-dot {
+    z-index: 2;
+    position: absolute;
+    left: 38px;
+    bottom: 7px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer>img {
+        width: 120px;
+        height: 40px;
+    }
+
+    .red-dot {
+        top: 8px;
+    }
+}

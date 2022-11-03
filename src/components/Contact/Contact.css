@@ -1,0 +1,95 @@
+.contact>header>h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+}
+
+.contact>header>p {
+    color: #475467;
+    margin-top: 16px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.form-fields {
+    margin-top: 48px;
+}
+
+.form-fields>form {
+    display: grid;
+    gap: 24px;
+    font-size: 14px;
+    color: #344054;
+}
+
+.form-fields>form>label {
+    display: grid;
+    gap: 6px;
+}
+
+.form-fields>form>label>input,
+.full-name>label>input,
+.form-fields>form>label>textarea {
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    height: 44px;
+    padding-left: 7px;
+    color: #667085;
+}
+
+.full-name {
+    display: grid;
+    gap: 24px;
+}
+
+.full-name>label {
+    display: grid;
+    gap: 6px;
+}
+
+.form-fields>form>label>textarea {
+    height: 132px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.form-fields>form>label:nth-child(4) {
+    display: flex;
+    gap: 10px;
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-fields>form>button {
+    background-color: #1570EF;
+    border: 1px solid #1570EF;
+    border-radius: 8px;
+    color: white;
+    height: 48px;
+    margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+    .contact {
+        width: 60vw;
+    }
+
+    .full-name {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .full-name>label {
+        display: grid;
+    }
+
+    .full-name>label>input {
+        width: 28vw;
+    }
+}
