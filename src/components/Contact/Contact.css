@@ -74,6 +74,11 @@
     margin-bottom: 64px;
 }
 
+.form-fields>form>button:disabled {
+    background-color: #B2DDFF;
+    border: 1px solid #B2DDFF;
+}
+
 @media (min-width: 768px) {
     .contact {
         width: 60vw;

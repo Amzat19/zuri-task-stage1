@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import "./Contact.css"
 
@@ -7,9 +8,11 @@ const Contact = () => {
         firstName: "",
         lastName: "",
         email: "",
-        message: "Send me a message and I'll reply you as soon as possible...",
+        message: "",
         verify: false
     });
+
+    const navigate = useNavigate(); 
 
     const onChange = (e) => {
         const { value, name, type, checked } = e.target;
@@ -20,6 +23,11 @@ const Contact = () => {
         })
     }
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        navigate("/");
+    };
+
     return (
         <>
             <section className="contact">
@@ -28,7 +36,7 @@ const Contact = () => {
                     <p>Hi there, contact me to ask me about anything you have in mind.</p>
                 </header>
                 <div className="form-fields">
-                    <form>
+                    <form onSubmit={submitForm}>
                         <div className="full-name">
                         <label htmlFor="first-name">
                             First Name
@@ -74,6 +82,7 @@ const Contact = () => {
                                 name="message" 
                                 cols="60" 
                                 rows="8" 
+                                placeholder="Send me a message and I'll reply you as soon as possible..."
                                 value={formValues.message}
                                 onChange={onChange}
                             ></textarea>
